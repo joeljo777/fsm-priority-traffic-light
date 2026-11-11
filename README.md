@@ -95,12 +95,13 @@ The testbench ([`tb_traffic_light_controller.v`](tb_traffic_light_controller.v))
 ## 📁 Repository Structure
 
 ```text
-├── traffic_light_controller.v      # Synthesizable RTL Module
-├── tb_traffic_light_controller.v   # Self-checking Testbench
-├── simulation_waveform.png         # Simulation Waveform Screenshot
-├── .gitignore                      # Vivado artifacts ignore filter
-├── README.md                       # Documentation
-└── LICENSE                         # MIT License
+├── traffic_light_controller.v            # Synthesizable RTL Module
+├── tb_traffic_light_controller.v         # Self-checking Testbench
+├── simulation_waveform.png               # Simulation Waveform Screenshot
+├── Traffic_Light_Controller_Documentation.pdf # Detailed Architectural & Verification PDF
+├── .gitignore                            # Vivado artifacts ignore filter
+├── README.md                             # Documentation
+└── LICENSE                               # MIT License
 ```
 
 ---
