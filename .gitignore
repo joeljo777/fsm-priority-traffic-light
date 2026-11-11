@@ -1,0 +1,24 @@
+# Vivado auto-generated project files and directories
+*.jou
+*.log
+*.str
+*.pb
+*.dcp
+*.wdb
+*.vcd
+.Xil/
+xsim.dir/
+
+# Vivado project build directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
