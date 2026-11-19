@@ -1,21 +1,25 @@
-# FSM-Based Priority Traffic Light Controller with Emergency Vehicle Detection
+# Priority Traffic Light Controller with Emergency Vehicle Detection
+
+**Team: Bit**  
+*Members:* Joel Jo (`R23EN060`), M S Sunil (`R23EN079`), Ananya Y (`R23EN020`), Karthik S (`R23EN066`)
 
 [![Language](https://img.shields.io/badge/Language-Verilog--2001-blue.svg)](traffic_light_controller.v)
-[![Simulation](https://img.shields.io/badge/Simulation-Vivado_XSim-orange.svg)](tb_traffic_light_controller.v)
-[![Target](https://img.shields.io/badge/Target-Xilinx_Artix--7_%2F_Basys_3-red.svg)](basys3_master.xdc)
-[![Documentation](https://img.shields.io/badge/Documentation-5--Page_PDF-blueviolet.svg)](Traffic_Light_Controller_Documentation.pdf)
+[![Simulation](https://img.shields.io/badge/Simulation-EDA_Playground_%2F_Vivado-orange.svg)](tb_traffic_light_controller.v)
+[![Report](https://img.shields.io/badge/Report-5--Page_PDF-blueviolet.svg)](Traffic_Light_Controller_Project_Report.pdf)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-A fully synthesizable **Moore Finite State Machine (FSM)** traffic light controller implemented in Verilog-2001 for a 4-way intersection (North-South vs. East-West). Designed with deterministic anti-collision guarantees, pedestrian/vehicular clearance buffers, and dynamic **two-tier preemption for emergency vehicles** (ambulances, fire engines, police units).
+A fully synthesizable **Moore Finite State Machine (FSM)** priority traffic light controller implemented in Verilog HDL. Designed with deterministic anti-collision guarantees, safe vehicular deceleration phases, and dynamic **emergency vehicle preemption** (holding Road A Green).
 
-> 📄 **Complete Technical Report**: A detailed 5-page specification, state transition analysis, RTL walkthrough, and waveform breakdown is available in [`Traffic_Light_Controller_Documentation.pdf`](Traffic_Light_Controller_Documentation.pdf).
+> 📄 **Official 5-Page Project Report**: The complete technical documentation prepared by Team Bit with state transition diagrams, RTL walkthrough, EPWave waveform analysis, and FPGA resource estimates is available in [`Traffic_Light_Controller_Project_Report.pdf`](Traffic_Light_Controller_Project_Report.pdf).
 
 ---
 
-## 📸 Simulation Waveform Result
+## 📸 Simulation Waveform Results
 
-Below is the verified behavioral simulation running in **AMD Xilinx Vivado (XSim)**, demonstrating normal cycling, emergency preemption, and safe yellow transition braking:
+### EDA Playground (EPWave):
+![EPWave Simulation Waveform](epwave_simulation.png)
 
+### AMD Xilinx Vivado (XSim):
 ![Vivado Simulation Waveform](simulation_waveform.png)
 
 ---

@@ -1,14 +1,15 @@
+`timescale 1ns/1ps
 
 module priority_traffic_light (
     input clk,
     input rst,
-    input priority,
+    input priority_in,   // Active-high emergency vehicle sensor for Road A
 
     output reg [2:0] road_A,
     output reg [2:0] road_B
 );
 
-    // Light encoding
+    // Light encoding {Red, Yellow, Green}
     parameter RED    = 3'b100;
     parameter YELLOW = 3'b010;
     parameter GREEN  = 3'b001;
@@ -21,7 +22,7 @@ module priority_traffic_light (
 
     reg [1:0] state, next_state;
 
-    // State transition
+    // State transition (Sequential)
     always @(posedge clk or posedge rst) begin
         if (rst)
             state <= S0;
@@ -29,27 +30,34 @@ module priority_traffic_light (
             state <= next_state;
     end
 
-    // Next state logic
+    // Next state logic (Combinational)
     always @(*) begin
 
         case (state)
 
-            S0: next_state = S1;
-
-            S1: next_state = S2;
-
-            S2: begin
-                if (priority)
-                    next_state = S3;
+            // S0: Road A Green, Road B Red
+            // If priority vehicle detected on Road A, hold Green; otherwise transition to Yellow
+            S0: begin
+                if (priority_in)
+                    next_state = S0;
                 else
-                    next_state = S3;
+                    next_state = S1;
             end
 
+            // S1: Road A Yellow, Road B Red (Braking transition)
+            S1: begin
+                next_state = S2;
+            end
+
+            // S2: Road A Red, Road B Green
+            // Transition to Yellow to yield back to Road A
+            S2: begin
+                next_state = S3;
+            end
+
+            // S3: Road A Red, Road B Yellow (Braking transition)
             S3: begin
-                if (priority)
-                    next_state = S0;
-                else
-                    next_state = S0;
+                next_state = S0;
             end
 
             default: next_state = S0;
@@ -57,7 +65,7 @@ module priority_traffic_light (
         endcase
     end
 
-    // Output logic
+    // Output logic (Combinational)
     always @(*) begin
 
         road_A = RED;
