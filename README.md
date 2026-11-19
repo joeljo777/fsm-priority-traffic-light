@@ -1,16 +1,16 @@
 # Priority Traffic Light Controller with Emergency Vehicle Detection
 
-**Team: Bit**  
+**Team: ASTRODEVS**  
 *Members:* Joel Jo (`R23EN060`), M S Sunil (`R23EN079`), Ananya Y (`R23EN020`), Karthik S (`R23EN066`)
 
 [![Language](https://img.shields.io/badge/Language-Verilog--2001-blue.svg)](traffic_light_controller.v)
 [![Simulation](https://img.shields.io/badge/Simulation-EDA_Playground_%2F_Vivado-orange.svg)](tb_traffic_light_controller.v)
-[![Report](https://img.shields.io/badge/Report-5--Page_PDF-blueviolet.svg)](Traffic_Light_Controller_Project_Report.pdf)
+[![Report](https://img.shields.io/badge/Report-DOCX_Document-blueviolet.svg)](Priority_Traffic_Light_Controller_ASTRODEVS_Report.docx)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 A fully synthesizable **Moore Finite State Machine (FSM)** priority traffic light controller implemented in Verilog HDL. Designed with deterministic anti-collision guarantees, safe vehicular deceleration phases, and dynamic **emergency vehicle preemption** (holding Road A Green).
 
-> 📄 **Official 5-Page Project Report**: The complete technical documentation prepared by Team Bit with state transition diagrams, RTL walkthrough, EPWave waveform analysis, and FPGA resource estimates is available in [`Traffic_Light_Controller_Project_Report.pdf`](Traffic_Light_Controller_Project_Report.pdf).
+> 📄 **Official Technical Project Report (Word Document)**: Complete technical report prepared by Team ASTRODEVS with state transition excitation tables, synthesizable RTL walkthrough, EPWave waveform analysis, and FPGA resource estimates is available in [`Priority_Traffic_Light_Controller_ASTRODEVS_Report.docx`](Priority_Traffic_Light_Controller_ASTRODEVS_Report.docx).
 
 ---
 
