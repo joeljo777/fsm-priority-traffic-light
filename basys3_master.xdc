@@ -55,3 +55,4 @@ set_property PACKAGE_PIN P1 [get_ports {state_out[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {state_out[1]}]
 set_property PACKAGE_PIN L1 [get_ports {state_out[2]}]					
 set_property IOSTANDARD LVCMOS33 [get_ports {state_out[2]}]
+
