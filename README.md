@@ -164,3 +164,6 @@ The self-checking testbench ([`tb_traffic_light_controller.v`](tb_traffic_light_
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## **The CHASE continues**
